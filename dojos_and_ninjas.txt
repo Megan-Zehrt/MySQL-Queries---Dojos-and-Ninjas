@@ -1,0 +1,35 @@
+SELECT * FROM dojos_and_ninjas_schema.dojos;
+
+INSERT INTO dojos (name) VALUES ("First Dojo");
+INSERT INTO dojos (name) VALUES ("Dallas");
+INSERT INTO dojos (name) VALUES ("New York");
+
+DELETE FROM dojos WHERE dojos.id = 1;
+DELETE FROM dojos WHERE dojos.id = 19;
+DELETE FROM dojos WHERE dojos.id = 20;
+
+INSERT INTO dojos (name) VALUES ("Dallas");
+INSERT INTO dojos (name) VALUES ("Chicago");
+INSERT INTO dojos (name) VALUES ("Magnolia");
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas;
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Pink", "Ninja", 18, 21); 
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Purple", "Ninja", 19, 21); 
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Blue", "Ninja", 20, 21); 
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("White", "Ninja", 18, 22);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Beige", "Ninja", 19, 22);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Brown", "Ninja", 20, 22); 
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Red", "Ninja", 18, 23);  
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Orange", "Ninja", 18, 23);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Green", "Ninja", 18, 23);
+
+
+SELECT * FROM ninjas WHERE dojo_id = 21;
+SELECT * FROM ninjas WHERE dojo_id = 23;
+SELECT * FROM ninjas WHERE id = 10;
+
+SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id WHERE ninjas.id = 6;
+SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id;
